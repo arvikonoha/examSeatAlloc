@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <title>Admin | Submission</title>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="exams.html">Exams</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <label for="excel_file">Upload the excel file</label>
+      <input type="file" name="exam_info" id="excel_file">
+      <br>
+      <label for="exam_name">Enter the exam name</label>
+      <br>
+      <input type="text" name="name" id="exam_name">
+      <br>
+      <label for="exam_date">Enter the exam date</label>
+      <br>
+      <input type="date" name="date" id="exam_date">
+      <br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
