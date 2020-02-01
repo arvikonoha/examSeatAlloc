@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"><!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Admin | Submission</title>
-</head>
-<body>
-  <nav class=" blue-grey darken-4 white-text">
-    <div class="nav-wrapper container">
-      <a href="#" class="brand-logo"> <i class="material-icons large">school</i> </a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/exams">Exams</a></li>
-        <li><a href="/logout">Logout</a></li>
-      </ul>
-    </div>
-  </nav>
-  <%- messages() %>
-  <div class="row card-panel">
-    <form action="/" method="POST" enctype="multipart/form-data" class="col offset-s1 s10">
-      <br>
-        <label for="excel_file" style="font-size:23px;">Upload the excel file</label>
-        <br>
-        <br>
-        <input type="file" name="exam_info" id="excel_file">
-        <br>
-      <div class="input-field">
-        <input type="text" name="name" id="exam_name">
-        <label for="exam_name">Enter the exam name</label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Admin | Submission</title>
+  </head>
+  <body>
+    <nav class=" blue-grey darken-4 white-text">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo">
+          <i class="material-icons large">school</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/api/exams">Exams</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
       </div>
-      <br>
-        <label for="exam_date" style="font-size:15px;">Enter the exam date</label>
-      <br>
-        <input type="date" name="date" id="exam_date">
-      <br>
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-      </button>
-    </form>
-  </div>
-  
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
+    </nav>
+    <%- messages() %>
+    <div class="row card-panel">
+      <form
+        action="/api/exam"
+        method="POST"
+        enctype="multipart/form-data"
+        class="col offset-s1 s10"
+      >
+        <br />
+        <label for="excel_file" style="font-size:23px;"
+          >Upload the excel file</label
+        >
+        <br />
+        <br />
+        <input type="file" name="exam_info" id="excel_file" />
+        <br />
+        <div class="input-field">
+          <input type="text" name="name" id="exam_name" />
+          <label for="exam_name">Enter the exam name</label>
+        </div>
+        <br />
+        <label for="exam_date" style="font-size:15px;"
+          >Enter the exam date</label
+        >
+        <br />
+        <input type="date" name="date" id="exam_date" />
+        <br />
+        <button
+          class="btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
 </html>
